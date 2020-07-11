@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Start from "./Start"
+import Game from "./Game"
+import EndScreen from "./EndScreen"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [componentToRender, setcomponentToRender] = useState("start");
+  const [counterRound, setcounterRound] = useState(0);
+  const [name, setname] = useState("")
+  const [resultWholeGame, setresultWholeGame] = useState("")
+
+
+  const handleInfoGame = (componentToRender) => {
+    setcomponentToRender(componentToRender)
+  }
+  if (componentToRender === "start") {
+    return (
+      <div className="background">
+        < Start
+          name={name}
+          setname={setname}
+          counterRound={counterRound}
+          setcounterRound={setcounterRound}
+          handleInfoGame={handleInfoGame}
+        />
+      </div>
+
+    );
+  }
+  if (componentToRender === "game") {
+    return (
+      < Game
+        name={name}
+        counterRound={counterRound}
+        handleInfoGame={handleInfoGame}
+        setresultWholeGame={setresultWholeGame}
+      />
+
+    );
+  }
+  if (componentToRender === "end") {
+    return (
+      < EndScreen
+        resultWholeGame={resultWholeGame}
+        setresultWholeGame={setresultWholeGame}
+        counterRound={counterRound}
+        setcounterRound={setcounterRound}
+        handleInfoGame={handleInfoGame}
+      />
+
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,351 @@
+.titleBackground{
+background-color:rgb(51, 51, 51);
+width: 100vw;
+animation: backgroundAnimtion 2s forwards;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 20px;
+}
+.result{
+background-color: #ade9dd;
+align-items: center;
+width: 100%;
+height: 25vh;
+display: flex;
+justify-content: space-evenly;
+}
+.playerBox{
+width: 110px;
+height: 100px;    
+text-align: center;
+font-size: 18px;
+}
+.roundContainer{
+background-color:rgb(51, 51, 51);
+width: 100vw;
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 20px;
+margin-bottom: 1px;
+}
+.weapon{
+background-color: #eee1fe;
+height: 55vh;
+width: 100vw;
+position: relative;
+padding-top: 50px;
+animation: fade-in-down  0.7s backwards ;
+}
+.backroundweapon{
+background-color: rgb(249, 237, 197);
+height: 55vh;
+width: 100vw;
+}
+.weapon-inner{
+display: flex;
+justify-content: space-between;
+}
+.weapon h3{
+font-size: 20px;
+text-align: center;
+padding: 0;
+color: black;
+margin-bottom: 50px;
+animation: none;
+}
+.weapons{
+height: 110px;
+width: 110px;
+background-color: black;
+margin: 10px;
+border-radius: 50%;
+background-color: white;
+border: 4px solid  #78d1dc;
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+}
+.paperImg{
+background-image: url(./paper.svg);
+height: 100%;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-position-y: 10px;
+
+}
+.rockImg{
+background-image: url(./rock.svg);
+height: 100%;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-position-y: 20px;
+}
+.scissorsImg{
+background-image: url(./scissors.svg);
+height: 100%;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-position-y: 10px;
+}
+.choiseBox{
+margin-bottom: 20px;
+width: 130px;
+margin: auto;
+animation: fade-in-left 1s 0.7s both;
+}
+.choiseBox2{
+width: 180px;
+margin: auto;
+animation: fade-in-right 1s 1.7s both;
+}
+.yourChoiceText{
+text-align: center;
+padding: 0;
+font-size: 20px;
+margin-bottom: 0 !important;
+color: white !important;
+}
+.weaponChosed{
+padding-top: 20px;
+background-color: rgb(51, 51, 51);
+top: 100%;
+right: 0;
+bottom: 0;
+left: 0;
+animation: backgroundAnimtionChosedWeapon 0.5s  both;
+position: absolute;
+}
+.weaponResult{
+background-color: rgb(249, 237, 197);
+top: 0;
+right: 0;
+bottom: 100%;
+left: 0;
+animation: backgroundAnimtionResult 0.7s 3s  both;
+position: absolute;
+}
+.continueButton{
+width: 120px;
+height: 50px;
+background-color:rgb(51, 51, 51);
+color: white;
+border-radius: 20px;
+margin-left:50px ;
+margin-top: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-fill-mode: backwards;
+cursor:pointer;
+margin: auto;
+}
+div.weaponResult h3{
+font-size: 25px ;
+padding-top: 80px;
+color: black;
+text-align: center;
+padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+.titleBackground{
+font-size: 30px;
+}
+.result{
+align-items: center;
+font-size: 30px;
+}
+.playerBox{
+width: unset;
+height: 100px;    
+text-align: center;
+font-size: 22px;
+}
+.roundContainer{
+font-size: 25px;
+}
+.weapon{
+padding-top: 80px;
+}
+.weapon h3{
+font-size: 22px;
+}
+.weapons{
+height: 220px;
+width: 220px;
+background-color: black;
+margin: 10px;
+border-radius: 50%;
+background-color: white;
+border: 8px solid  #78d1dc;
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+}
+.weapons:hover{
+transition: 0.5s;
+background-color: #78d1dc;
+border: 8px solid  white;
+cursor: pointer;
+}
+.weaponChosed{
+padding-top: 20px;
+background-color: rgb(51, 51, 51);
+top: 100%;
+right: 0;
+bottom: 0;
+left: 0;
+animation: backgroundAnimtionChosedWeapon 0.5s  both;
+position: absolute;
+display: flex;
+justify-content: space-evenly;
+}
+.choiseBox{
+margin-bottom: 20px;
+width: unset;
+margin: auto;
+animation: fade-in-left 1s 0.7s both;
+}
+.choiseBox2{
+width: unset;
+margin: auto;
+animation: fade-in-right 1s 1.7s both;
+}
+.continueButton{
+font-size: 20px;
+width: 170px;
+height: 60px;
+z-index: 1;
+position: relative;
+}
+div.weaponResult h3{
+font-size: 30px ;
+padding-top: 110px;
+color: black;
+text-align: center;
+padding-left: 0;
+}
+
+.continueButton:after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 51%;
+  height: 100%;
+  right:-100%;
+  top: 0;
+  background-color:#eee1fe;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+}
+.continueButton::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 51%;
+  height: 100%;
+  left:-100%;
+  top: 0;
+  background-color:#eee1fe;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+}
+.continueButton:hover:after{
+  right:0%;
+  border: 1px solid #eee1fe;
+}
+.continueButton:hover:before {
+left: 0%;
+border: 1px solid #eee1fe;
+}
+.continueButton:hover{
+color: #333;
+border: 1px solid #333;
+transform: scale(1.1);
+transition: 0.5s;
+}
+}
+
+
+
+
+
+
+@keyframes backgroundAnimtion {
+
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 10vh;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50%{
+      transform: translateX(20%);
+        opacity: 0.7;
+    }
+  
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+    @keyframes fade-in-right {
+
+    0% {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    50%{
+      transform: translateX(-20%);
+        opacity: 0.7;
+    }
+  
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes backgroundAnimtionChosedWeapon {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+  }
+
+  @keyframes backgroundAnimtionResult {
+    0% {
+        bottom: 100%;
+    }
+    5%{
+        z-index: 1;
+    }
+    100% {
+        bottom: 0;
+        z-index: 1;
+    }
+  }
+  @keyframes fade-in-down {
+     0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
