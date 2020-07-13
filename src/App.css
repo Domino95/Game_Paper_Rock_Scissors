@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Fantasy;
+  font-family: 'Gotu', sans-serif;
   font-size: 1em;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -18,7 +18,6 @@ padding-top: 50px;
   color: white;
   font-size: 25px;
   margin-bottom: 20px;
-  font-family: fantasy;
   display: flex;
 }
 .title div:nth-child(1){
@@ -38,7 +37,6 @@ div.background h5{
   color: white;
   font-size: 15px;
   padding-left: 50px;
-  font-family: fantasy;
   animation: fade-in-left 1s 2.5s;
   animation-fill-mode: both;
   margin-bottom: 100px;
@@ -46,7 +44,6 @@ div.background h5{
 div.background h3{
   color: white;
   font-size: 15px;
-  font-family: fantasy;
   margin-bottom: 20px;
 }
 .startButton{
