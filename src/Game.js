@@ -39,8 +39,6 @@ const Game = (props) => {
             setisweaponchosed(false)
         }
     }
-
-
     const calculateResult = (weapon) => {
         let arraySelection = ["paper", "rock", "scissors"]
         let computerSelection = arraySelection[Math.floor(Math.random() * arraySelection.length)]
@@ -93,16 +91,14 @@ const Game = (props) => {
             default:
         }
     }
-
     return (
-
         <>
             <div className="titleBackground">
                 Papier, Kamień, Nożyce
             </div>
             <div className="result">
                 <div className="playerBox">
-                    {props.name === "" ? "ANONIM: " : props.name.toUpperCase()}
+                    {props.name === "" ? "ANONIM " : props.name.toUpperCase()}
                     <h1>{scorePlayer} </h1></div>
                 <div className="playerBox"> VS.</div>
                 <div className="playerBox">KOMPUTER <h1> {scoreComputer}</h1></div>
@@ -110,7 +106,6 @@ const Game = (props) => {
             <div className="roundContainer">
                 Round  {numberRound} / {props.counterRound}
             </div>
-
             {isweaponchosed ?
                 <div className="weapon">
                     <div className="weaponChosed" >
@@ -128,7 +123,6 @@ const Game = (props) => {
                         </div>
                     </div>
                 </div>
-
                 :
                 <div className="backroundweapon">
                     <div className="weapon">
@@ -141,10 +135,7 @@ const Game = (props) => {
                     </div>
                 </div>
             }
-
-
         </>
     );
 }
-
 export default Game;

@@ -7,9 +7,10 @@ align-items: center;
 justify-content: center;
 color: white;
 font-size: 20px;
+border-bottom: 1px solid white;
 }
 .result{
-background-color: #ade9dd;
+background-color: #78d1dc;
 align-items: center;
 width: 100%;
 height: 25vh;
@@ -31,7 +32,8 @@ align-items: center;
 justify-content: center;
 color: white;
 font-size: 20px;
-margin-bottom: 1px;
+border-bottom: 1px solid white;
+border-top: 1px solid white;
 }
 .weapon{
 background-color: #eee1fe;
@@ -39,7 +41,8 @@ height: 55vh;
 width: 100vw;
 position: relative;
 padding-top: 50px;
-animation: fade-in-down  0.7s backwards ;
+animation: fade-in-down  1s backwards ;
+animation-timing-function: ease-in-out;
 }
 .backroundweapon{
 background-color: rgb(249, 237, 197);
@@ -85,7 +88,7 @@ height: 100%;
 width: 100%;
 background-repeat: no-repeat;
 background-position: center;
-background-position-y: 20px;
+background-position-y: 10px;
 }
 .scissorsImg{
 background-image: url(./scissors.svg);
@@ -156,12 +159,17 @@ padding-left: 0;
 }
 
 @media (min-width: 1024px) {
+.rockImg{
+  background-position-y: 20px;
+}
 .titleBackground{
 font-size: 30px;
 }
 .result{
 align-items: center;
 font-size: 30px;
+width: 1024px;
+margin: auto;
 }
 .playerBox{
 width: unset;
@@ -171,9 +179,17 @@ font-size: 22px;
 }
 .roundContainer{
 font-size: 25px;
+width: 1024px;
+margin: auto;
+}
+.backroundweapon{
+width: 1024px;
+margin: auto;
 }
 .weapon{
 padding-top: 80px;
+width: 1024px;
+margin: auto;
 }
 .weapon h3{
 font-size: 22px;
@@ -345,6 +361,9 @@ transition: 0.5s;
      0% {
         top: 100%;
     }
+    70% {
+      top: -10%;
+  }
     100% {
         top: 0;
     }
