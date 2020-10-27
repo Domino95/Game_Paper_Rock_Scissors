@@ -6,7 +6,7 @@ const EndScreen = (props) => {
         <div className="backgroundEnd">
             <div className="backgroundEndScreen">
                 <h3>{props.resultWholeGame}</h3>
-                <h4>Chcesz zagrać ponownie? Ile rund wybierasz?</h4>
+                <h4>You wanna play again? How many rounds you will choose?</h4>
                 <button className={props.counterRound === 3 ? "roundButtonEndScreenActive" : 'roundButtonEndScreen'}
                     onClick={() => props.setcounterRound(3)}> 3</button>
                 <button className={props.counterRound === 6 ? "roundButtonEndScreenActive" : 'roundButtonEndScreen'}
@@ -16,10 +16,9 @@ const EndScreen = (props) => {
                 <button className={props.counterRound === 12 ? "roundButtonEndScreenActive" : 'roundButtonEndScreen'}
                     onClick={() => props.setcounterRound(12)}> 12</button>
 
-                <button className="rematchButton" onClick={() => props.handleInfoGame("game")}>Zagraj ponownie</button>
+                <button className="rematchButton" onClick={() => props.handleInfoGame("game")}>Play again</button>
             </div>
         </div>
     );
 }
-
 export default EndScreen;

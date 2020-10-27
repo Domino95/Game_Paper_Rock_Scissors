@@ -12,11 +12,13 @@ const Game = (props) => {
 
     const setStore = () => {
         switch (result) {
-            case ("WYGRANA"):
+            case ("You win"):
                 setscorePlayer(scorePlayer = scorePlayer + 1)
                 break;
-            case ("PRZEGRANA"):
+            case ("You lose"):
                 setscoreComputer(scoreComputer = scoreComputer + 1)
+                break;
+            case ("Draw"):
                 break;
             default:
                 console.log("something wrong...")
@@ -25,13 +27,13 @@ const Game = (props) => {
 
         if (numberRound === props.counterRound + 1) {
             if (scorePlayer > scoreComputer) {
-                props.setresultWholeGame("Wygrałeś!")
+                props.setresultWholeGame("You win!")
             }
             else if (scorePlayer < scoreComputer) {
-                props.setresultWholeGame("Przegrałeś")
+                props.setresultWholeGame("You lose")
             }
             else {
-                props.setresultWholeGame("Remis")
+                props.setresultWholeGame("Draw")
             }
             props.handleInfoGame("end")
         }
@@ -49,13 +51,13 @@ const Game = (props) => {
             case ("paper"):
                 switch (computerSelection) {
                     case ("paper"):
-                        setresult("REMIS")
+                        setresult("Draw")
                         break;
                     case ("rock"):
-                        setresult("WYGRANA")
+                        setresult("You win")
                         break;
                     case ("scissors"):
-                        setresult("PRZEGRANA")
+                        setresult("You lose")
                         break;
                     default:
                 }
@@ -63,13 +65,13 @@ const Game = (props) => {
             case ("rock"):
                 switch (computerSelection) {
                     case ("paper"):
-                        setresult("PRZEGRANA")
+                        setresult("You lose")
                         break;
                     case ("rock"):
-                        setresult("REMIS")
+                        setresult("Draw")
                         break;
                     case ("scissors"):
-                        setresult("WYGRANA")
+                        setresult("You win")
                         break;
                     default:
                 }
@@ -77,13 +79,13 @@ const Game = (props) => {
             case ("scissors"):
                 switch (computerSelection) {
                     case ("paper"):
-                        setresult("WYGRANA")
+                        setresult("You win")
                         break;
                     case ("rock"):
-                        setresult("PRZEGRANA")
+                        setresult("You lose")
                         break;
                     case ("scissors"):
-                        setresult("REMIS")
+                        setresult("Draw")
                         break;
                     default:
                 }
@@ -94,14 +96,14 @@ const Game = (props) => {
     return (
         <>
             <div className="titleBackground">
-                Papier, Kamień, Nożyce
+                Paper, Rock, Scissors
             </div>
             <div className="result">
                 <div className="playerBox">
-                    {props.name === "" ? "ANONIM " : props.name.toUpperCase()}
+                    {props.name === "" ? "ANONYMOUS " : props.name.toUpperCase()}
                     <h1>{scorePlayer} </h1></div>
                 <div className="playerBox"> VS.</div>
-                <div className="playerBox">KOMPUTER <h1> {scoreComputer}</h1></div>
+                <div className="playerBox">COMPUTER<h1> {scoreComputer}</h1></div>
             </div>
             <div className="roundContainer">
                 Round  {numberRound} / {props.counterRound}
@@ -111,14 +113,14 @@ const Game = (props) => {
                     <div className="weaponChosed" >
                         <div className="weaponResult">
                             <h3>{result}</h3>
-                            <div className="continueButton" onClick={() => setStore()}>Kontynuuj</div>
+                            <div className="continueButton" onClick={() => setStore()}>Continue</div>
                         </div>
                         <div className="choiseBox">
-                            <h3 className="yourChoiceText">Twój wybór</h3>
+                            <h3 className="yourChoiceText">Your choise</h3>
                             <div className="weapons" > <div className={`${weaponChosed}Img`} /></div>
                         </div>
                         <div className="choiseBox2">
-                            <h3 className="yourChoiceText">Wybór komputera</h3>
+                            <h3 className="yourChoiceText">Computer choise</h3>
                             <div className="weapons" > <div className={`${weaponChosedComputer}Img`} /></div>
                         </div>
                     </div>
@@ -126,7 +128,7 @@ const Game = (props) => {
                 :
                 <div className="backroundweapon">
                     <div className="weapon">
-                        <h3>Wybierz swoją broń</h3>
+                        <h3>Choose your weapon</h3>
                         <div className="weapon-inner">
                             <div className="weapons" > <div className="paperImg" onClick={() => calculateResult("paper")} /></div>
                             <div className="weapons"> <div className="rockImg" onClick={() => calculateResult("rock")} /></div>

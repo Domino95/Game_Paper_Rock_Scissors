@@ -10,11 +10,12 @@
 .background{
 background-color:rgb(51, 51, 51);
 width: 100vw;
-height: 100vh;
+height: calc(var(--vh, 1vh) * 100);
 padding-top: 50px;
 }
 .title{
-  padding-left: 50px;
+  display: flex;
+  justify-content: center;
   color: white;
   font-size: 25px;
   margin-bottom: 20px;
@@ -34,9 +35,9 @@ padding-top: 50px;
 }
 
 div.background h5{
+  text-align: center;
   color: white;
   font-size: 15px;
-  padding-left: 50px;
   animation: fade-in-left 1s 2.5s;
   animation-fill-mode: both;
   margin-bottom: 100px;
@@ -50,7 +51,7 @@ div.background h3{
 font-size: 20px;
 width: 150px;
 height: 50px;
-background-color: #eee1fe;
+background-color: #f8bff8;
 color: #333;
 border-radius: 20px;
 margin-left:50px ;
@@ -66,17 +67,15 @@ margin: auto;
 .roundBox{
   animation: fade-in-left 1s;
 }
-
 div.roundBox h3{
 font-size: 20px;
 text-align: center;
 padding: 0;
 }
-
 .roundButton{
 width:250px;
 height: 50px;
-background-color:  #eee1fe;
+background-color: #f8bff8;
 margin: auto;
 margin-bottom: 20px;
 display: flex;
@@ -94,7 +93,6 @@ div.nameBox h3{
   font-size: 20px;
   padding: 0;
 }
-
 .nameBox{
 width:300px;
 height: 250px;
@@ -110,7 +108,7 @@ height: 50px;
 width: 260px;
 border-radius: 20px;
 border: none;
-background-color: #eee1fe;
+background-color: #f8bff8;
 outline: none;
 padding: 10px;
 margin-bottom: 80px;

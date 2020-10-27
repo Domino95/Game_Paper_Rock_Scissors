@@ -1,14 +1,17 @@
 .backgroundEnd{
 background-color: rgb(51,51,51);
-height: 100vh;
+height: calc(var(--vh, 1vh) * 100);
 width: 100vw;
 }
 .backgroundEndScreen{
 background-color: #ade9dd;
-height: 100vh;
+height: calc(var(--vh, 1vh) * 100);
 width: 100vw;
-padding-top: 8vh;
 animation: fade-in-right 1s both;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 div.backgroundEndScreen h3{
 font-size: 25px;
@@ -56,7 +59,7 @@ transition: 0.4s;
 width:150px;
 height: 50px;
 background-color:  rgb(51,51,51);
-margin: 60px auto;
+margin-top: 20px;
 display: flex;
 align-items:center;
 justify-content: center;
@@ -69,9 +72,6 @@ outline: none;
 transition: 0.4s;
 font-size: 16px;
 }
-
-
-
 @keyframes fade-in-right {
 
     0% {

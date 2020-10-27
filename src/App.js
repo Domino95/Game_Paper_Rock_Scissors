@@ -3,12 +3,19 @@ import './App.css';
 import Start from "./Start"
 import Game from "./Game"
 import EndScreen from "./EndScreen"
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.onresize = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
 function App() {
   const [componentToRender, setcomponentToRender] = useState("start");
   const [counterRound, setcounterRound] = useState(0);
   const [name, setname] = useState("")
   const [resultWholeGame, setresultWholeGame] = useState("")
+
 
 
   const handleInfoGame = (componentToRender) => {
