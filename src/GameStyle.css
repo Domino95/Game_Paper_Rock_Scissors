@@ -129,8 +129,8 @@ left: 0;
 animation: backgroundAnimtionChosedWeapon 0.5s  both;
 position: absolute;
 display: flex;
-flex-direction: column;
 justify-content: center;
+flex-direction: column;
 }
 .weaponResult{
 background-color: rgb(249, 237, 197);
@@ -167,12 +167,12 @@ padding-left: 0;
 }
 .choiseBox .weapons:hover{
   background-color: white;
-  border: 8px solid  #78d1dc;
+  border: 4px solid  #78d1dc;
   cursor: auto;
 } 
 .choiseBox2 .weapons:hover{
   background-color: white;
-  border: 8px solid  #78d1dc;
+  border: 4px solid  #78d1dc;
   cursor: auto;
 } 
 
@@ -240,6 +240,7 @@ animation: backgroundAnimtionChosedWeapon 0.5s  both;
 position: absolute;
 display: flex;
 justify-content: space-evenly;
+flex-direction: row;
 }
 .choiseBox{
 margin-bottom: 20px;
@@ -304,6 +305,12 @@ border: 1px solid #333;
 transform: scale(1.1);
 transition: 0.5s;
 }
+.choiseBox .weapons:hover{
+  border: 8px solid  #78d1dc;
+} 
+.choiseBox2 .weapons:hover{
+  border: 8px solid  #78d1dc;
+} 
 }
 
 
